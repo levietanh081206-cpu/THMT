@@ -143,6 +143,32 @@ let banKinh = 5;
 
 console.log(`${Pi} * ${banKinh} =`, Pi*(banKinh**2));
 
+// ==  (so sánh giá trị, ÉP KIỂU)
+// === (so sánh giá trị + kiểu, KHÔNG ép kiểu)
+
+console.log(5 == "5");      // true  (ép "5" thành 5)
+console.log(5 === "5");     // false (number ≠ string)
+console.log(true == 1);     // true  (ép true thành 1)
+console.log(true === 1);    // false
+
+// ❌ Luôn dùng === trong code thực tế!
+// == có thể gây bug khó tìm
+
+// Các toán tử so sánh
+console.log(10 > 5);        // true
+console.log(10 < 5);        // false
+console.log(10 >= 10);      // true
+console.log(10 <= 9);       // false
+console.log(10 != 5);       // true
+console.log(10 !== "10");   // true
+
+// Toán tử logic
+console.log(true && true);   // true  (AND — cả hai đều đúng)
+console.log(true && false);  // false
+console.log(true || false);  // true  (OR — một trong hai đúng)
+console.log(false || false); // false
+console.log(!true);          // false (NOT — đảo ngược)
+
 // bài tập con 0.6
 let diem = 7.5;
 let diemChuyenCan = 9;
