@@ -174,3 +174,30 @@ console.log(diaChiDayDu);
 
 hoSo.email = "le.viet.anh@gmail.com";
 console.log(hoSo.email);
+
+// bài 0.9
+// TODO: Viết các hàm sau:
+// 1. maxHaiSo(a, b) → trả về số lớn hơn
+// 2. laNamNhuan(nam) → true nếu năm nhuận
+//    (chia hết cho 4, không chia hết cho 100, hoặc chia hết cho 400)
+// 3. gioiThieu(hoTen, tuoi, nganh) → "Tôi là ..., ... tuổi, học ..."
+// 4. tinhGiaBan(giaGoc, giamGia = 0) → giá sau giảm (%)
+
+function maxHaiSo(a, b) {
+    return (a>b) ? a : b;
+}
+
+function laNamNhuan(nam) {
+    if((nam%400 == 0) || (nam%4 == 0 && nam%100 != 0)){
+        return true;
+    }
+    return false;
+}
+
+function gioiThieu(hoSon) {
+    console.log(`Tôi là ${hoSo.hoTen}, ${hoSo.tuoi} tuổi, học ngành ${hoSo.nganh}`);
+}
+
+function tinhGiaBan(giaGoc, giamGia = 0) {
+    return giaGoc - giaGoc*(1.0*giamGia/100)
+}
