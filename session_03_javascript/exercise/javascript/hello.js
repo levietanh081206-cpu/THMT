@@ -107,6 +107,32 @@ let donGia = 15000000;
 // "Hóa đơn: 2 x Laptop = 30,000,000 VNĐ"
 console.log(`${soLuong} x ${sanPham} = ${donGia*soLuong}`);
 
+let a = 15;
+let b = 4;
+
+// Phép cộng, trừ, nhân, chia
+console.log(`${a} + ${b} =`, a + b);    // 19
+console.log(`${a} - ${b} =`, a - b);    // 11
+console.log(`${a} * ${b} =`, a * b);    // 60
+console.log(`${a} / ${b} =`, a / b);    // 3.75
+console.log(`${a} % ${b} =`, a % b);    // 3 (chia lấy dư)
+console.log(`${a} ** ${b} =`, a ** b);  // 50625 (lũy thừa)
+
+// Phép gán kết hợp
+let x = 10;
+x += 5;   // x = x + 5 → 15
+x -= 3;   // x = x - 3 → 12
+x *= 2;   // x = x * 2 → 24
+x /= 4;   // x = x / 4 → 6
+console.log("x =", x);  // 6
+
+// Tăng/giảm 1
+let dem = 0;
+dem++;     // dem = dem + 1 → 1
+dem++;     // → 2
+dem--;     // dem = dem - 1 → 1
+console.log("dem =", dem);  // 1
+
 //bài tập con 0.5
 const Pi = 3.14159;
 let banKinh = 5;
