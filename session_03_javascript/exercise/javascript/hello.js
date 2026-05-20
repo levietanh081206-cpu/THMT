@@ -85,7 +85,7 @@ if(diem >= 5 && diemChuyenCan >= 8) {
 // 4. Duyệt mảng và in "Món i: ten mon"
 // 5. Kiểm tra "Phở" có trong mảng không?
 
-let menu = ["Sườn sào chua ngọt","Bò sào lá lốt","Trứng chiên","Cơm rang dưa bò","Gà luộc"];
+let menu = ["Sườn xào chua ngọt","Bò xào lá lốt","Trứng chiên","Cơm rang dưa bò","Gà luộc"];
 
 console.log(menu[0]);
 console.log(menu[menu.length-1]);
@@ -105,3 +105,72 @@ menu.forEach((dish,index) => {
 let so = [3, 1, 4, 1, 5, 9, 2, 6];
 so.sort((a, b) => b - a);  // Tăng dần → [1,1,2,3,4,5,6,9]
 console.log(so);
+
+// Bài tập con 0.8
+
+// ===== KHAI BÁO OBJECT =====
+let sinhVien = {
+    hoTen: "Nguyễn Văn Minh",
+    tuoi: 20,
+    mssv: "20240001",
+    diem: [8, 7.5, 9],
+    laSinhVien: true
+};
+
+// ===== TRUY CẬP THUỘC TÍNH =====
+console.log(sinhVien.hoTen);        // "Nguyễn Văn Minh" (dấu chấm)
+console.log(sinhVien["tuoi"]);      // 20 (dấu ngoặc vuông)
+console.log(sinhVien.diem[0]);      // 8 (truy cập mảng lồng)
+
+// ===== THÊM / SỬA THUỘC TÍNH =====
+sinhVien.email = "minh@example.com"; // Thêm mới
+sinhVien.tuoi = 21;                  // Sửa
+delete sinhVien.laSinhVien;          // Xóa
+
+// ===== DUYỆT OBJECT =====
+for (let key in sinhVien) {
+    console.log(`${key}: ${sinhVien[key]}`);
+}
+
+// ===== OBJECT METHODS =====
+console.log(Object.keys(sinhVien));   // ["hoTen", "tuoi", "mssv", "diem", "email"]
+console.log(Object.values(sinhVien)); // ["Nguyễn Văn Minh", 21, "20240001", ...]
+
+// TODO: Tạo object "hoSo" chứa:
+// - hoTen (string)
+// - tuoi (number)
+// - nganh (string)
+// - soThich (array: 3 sở thích)
+// - diaChi (object lồng: { tinh, quan, duong })
+
+// 1. In ra: "Tôi là [hoTen], [tuoi] tuổi, học ngành [nganh]"
+// 2. In ra sở thích đầu tiên
+// 3. In ra địa chỉ đầy đủ
+// 4. Thêm thuộc tính "email"
+
+let hoSo = {
+    hoTen: "Lê Việt Anh",
+    tuoi: 20,
+    nganh: "Software Engineer",
+    soThich: ["Video Game", "Novels", "Films"],
+    diaChi: {
+        tinh: "Ninh Bình",
+        quan: "Hà Nam",
+        duong: "Lê Hoàn"
+    } 
+}
+
+console.log(`Tôi là ${hoSo.hoTen}, ${hoSo.tuoi} tuổi, học ngành ${hoSo.nganh}`)
+
+console.log(`Sở thích của tôi là ${hoSo.soThich[0]}`);
+
+let diaChiDayDu = "";
+
+for (let key in hoSo.diaChi) {
+    diaChiDayDu += `${key} ${hoSo.diaChi[key]} `;
+}
+
+console.log(diaChiDayDu);
+
+hoSo.email = "le.viet.anh@gmail.com";
+console.log(hoSo.email);
