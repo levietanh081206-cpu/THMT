@@ -71,8 +71,8 @@ console.log(coBatBuocKhong);
 console.log(diemSo);
 
 let ho = "Nguyễn";
-let ten = "Minh";
-let tuoi = 20;
+ten = "Minh";
+tuoi = 20;
 let diem = 8.5;
 
 // ❌ Cách cũ — nối chuỗi bằng dấu +
@@ -170,7 +170,7 @@ console.log(false || false); // false
 console.log(!true);          // false (NOT — đảo ngược)
 
 // bài tập con 0.6
-let diem = 7.5;
+diem = 7.5;
 let diemChuyenCan = 9;
 
 // TODO: Kiểm tra và in ra:
@@ -190,6 +190,44 @@ if(diem >= 5 && diemChuyenCan >= 8) {
 } else {
     console.log("Không đạt!");
 }
+
+// ===== KHAI BÁO MẢNG =====
+let monHoc = ["Toán", "Lý", "Hóa", "Sinh"];
+diemSo = [8, 7, 9, 6.5, 8.5];
+let honHop = ["Minh", 20, true, null]; // Mảng hỗn hợp
+
+// ===== TRUY CẬP PHẦN TỬ =====
+console.log(monHoc[0]);    // "Toán" (chỉ số bắt đầu từ 0)
+console.log(monHoc[1]);    // "Lý"
+console.log(monHoc.length); // 4 (độ dài mảng)
+console.log(monHoc[monHoc.length - 1]); // "Sinh" (phần tử cuối)
+
+// ===== THÊM / XÓA =====
+monHoc.push("Anh");        // Thêm vào cuối → ["Toán","Lý","Hóa","Sinh","Anh"]
+monHoc.pop();               // Xóa cuối → ["Toán","Lý","Hóa","Sinh"]
+monHoc.unshift("GDCD");    // Thêm vào đầu → ["GDCD","Toán","Lý","Hóa","Sinh"]
+monHoc.shift();             // Xóa đầu → ["Toán","Lý","Hóa","Sinh"]
+
+// ===== DUYỆT MẢNG =====
+// Cách 1: for loop
+for (let i = 0; i < diemSo.length; i++) {
+    console.log(`Môn ${i + 1}: ${diemSo[i]} điểm`);
+}
+
+// Cách 2: forEach (hay dùng hơn)
+diemSo.forEach((diem, index) => {
+    console.log(`Môn ${index + 1}: ${diem} điểm`);
+});
+
+// ===== TÌM KIẾM =====
+console.log(monHoc.includes("Lý"));   // true
+console.log(monHoc.indexOf("Hóa"));   // 2 (vị trí)
+console.log(monHoc.indexOf("Anh"));   // -1 (không tìm thấy)
+
+// ===== SẮP XẾP =====
+let so = [3, 1, 4, 1, 5, 9, 2, 6];
+so.sort((a, b) => a - b);  // Tăng dần → [1,1,2,3,4,5,6,9]
+console.log(so);
 
 // bài tập con 0.7
 // TODO: Tạo mảng 5 món ăn yêu thích
@@ -216,9 +254,37 @@ menu.forEach((dish,index) => {
  }
 
  // ===== SẮP XẾP =====
-let so = [3, 1, 4, 1, 5, 9, 2, 6];
+so = [3, 1, 4, 1, 5, 9, 2, 6];
 so.sort((a, b) => b - a);  // Tăng dần → [1,1,2,3,4,5,6,9]
 console.log(so);
+
+// ===== KHAI BÁO OBJECT =====
+let sinhVien = {
+    hoTen: "Nguyễn Văn Minh",
+    tuoi: 20,
+    mssv: "20240001",
+    diem: [8, 7.5, 9],
+    laSinhVien: true
+};
+
+// ===== TRUY CẬP THUỘC TÍNH =====
+console.log(sinhVien.hoTen);        // "Nguyễn Văn Minh" (dấu chấm)
+console.log(sinhVien["tuoi"]);      // 20 (dấu ngoặc vuông)
+console.log(sinhVien.diem[0]);      // 8 (truy cập mảng lồng)
+
+// ===== THÊM / SỬA THUỘC TÍNH =====
+sinhVien.email = "minh@example.com"; // Thêm mới
+sinhVien.tuoi = 21;                  // Sửa
+delete sinhVien.laSinhVien;          // Xóa
+
+// ===== DUYỆT OBJECT =====
+for (let key in sinhVien) {
+    console.log(`${key}: ${sinhVien[key]}`);
+}
+
+// ===== OBJECT METHODS =====
+console.log(Object.keys(sinhVien));   // ["hoTen", "tuoi", "mssv", "diem", "email"]
+console.log(Object.values(sinhVien)); // ["Nguyễn Văn Minh", 21, "20240001", ...]
 
 // Bài tập con 0.8
 
