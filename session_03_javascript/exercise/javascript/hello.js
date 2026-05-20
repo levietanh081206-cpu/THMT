@@ -355,6 +355,42 @@ console.log(diaChiDayDu);
 hoSo.email = "le.viet.anh@gmail.com";
 console.log(hoSo.email);
 
+// ===== KHAI BÁO HÀM =====
+function chaoHoi(ten) {
+    return `Xin chào, ${ten}! Chào mừng đến với JavaScript!`;
+}
+
+console.log(chaoHoi("Minh"));
+console.log(chaoHoi("Lan"));
+
+// ===== HÀM CÓ NHIỀU THAM SỐ =====
+function tinhTong(a, b) {
+    return a + b;
+}
+
+function tinhDTChuNhat(dai, rong) {
+    return dai * rong;
+}
+
+console.log("Tổng:", tinhTong(10, 20));           // 30
+console.log("Diện tích:", tinhDTChuNhat(5, 3));   // 15
+
+// ===== HÀM CÓ GIÁ TRỊ MẶC ĐỊNH =====
+function tinhDiemTB(diem1, diem2, diem3, heSo = 1) {
+    return (diem1 + diem2 + diem3) / 3 * heSo;
+}
+
+console.log("Điểm TB:", tinhDiemTB(8, 7, 9));       // 8
+console.log("Điểm TB x1.1:", tinhDiemTB(8, 7, 9, 1.1)); // 8.8
+
+// ===== ARROW FUNCTION (ES6) =====
+const binhPhuong = (so) => so * so;
+const laChan = (so) => so % 2 === 0;
+
+console.log("5² =", binhPhuong(5));       // 25
+console.log("4 chẵn?", laChan(4));        // true
+console.log("7 chẵn?", laChan(7));        // false
+
 // bài 0.9
 // TODO: Viết các hàm sau:
 // 1. maxHaiSo(a, b) → trả về số lớn hơn
