@@ -76,3 +76,32 @@ if(diem >= 5 && diemChuyenCan >= 8) {
 } else {
     console.log("Không đạt!");
 }
+
+// bài tập con 0.7
+// TODO: Tạo mảng 5 món ăn yêu thích
+// 1. In ra món đầu tiên và cuối cùng
+// 2. Thêm 1 món vào đầu
+// 3. Xóa món cuối cùng
+// 4. Duyệt mảng và in "Món i: ten mon"
+// 5. Kiểm tra "Phở" có trong mảng không?
+
+let menu = ["Sườn sào chua ngọt","Bò sào lá lốt","Trứng chiên","Cơm rang dưa bò","Gà luộc"];
+
+console.log(menu[0]);
+console.log(menu[menu.length-1]);
+menu.unshift("Đậu sốt cà chua");
+menu.pop();
+
+menu.forEach((dish,index) => {
+    console.log(`Món ${index + 1}: ${dish}`);
+})
+ if (monHoc.includes("Phở")) {
+    console("Có phở!");
+ } else {
+    console.log("Không có Phở");
+ }
+
+ // ===== SẮP XẾP =====
+let so = [3, 1, 4, 1, 5, 9, 2, 6];
+so.sort((a, b) => b - a);  // Tăng dần → [1,1,2,3,4,5,6,9]
+console.log(so);
