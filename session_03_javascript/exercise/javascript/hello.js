@@ -70,6 +70,34 @@ console.log(soTinChi);
 console.log(coBatBuocKhong);
 console.log(diemSo);
 
+let ho = "Nguyễn";
+let ten = "Minh";
+let tuoi = 20;
+let diem = 8.5;
+
+// ❌ Cách cũ — nối chuỗi bằng dấu +
+let cau1 = "Tên: " + ho + " " + ten + ", Tuổi: " + tuoi;
+console.log(cau1);
+
+// ✅ Cách mới — Template Literal (backtick `)
+let cau2 = `Tên: ${ho} ${ten}, Tuổi: ${tuoi}`;
+console.log(cau2);
+
+// Tính toán trong template literal
+let cau3 = `${ho} ${ten} được ${diem} điểm. Năm sau ${ten} sẽ ${tuoi + 1} tuổi.`;
+console.log(cau3);
+
+// In nhiều dòng
+let thongBao = `
+=== THÔNG TIN SINH VIÊN ===
+Họ tên : ${ho} ${ten}
+Tuổi    : ${tuoi}
+Điểm    : ${diem}
+Xếp loại: ${diem >= 8 ? "Giỏi" : diem >= 6.5 ? "Khá" : "Trung bình"}
+===========================
+`;
+console.log(thongBao);
+
 // bài tập con 0.4
 let sanPham = "Laptop";
 let soLuong = 2;
