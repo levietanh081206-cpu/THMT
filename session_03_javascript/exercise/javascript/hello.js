@@ -25,6 +25,40 @@ console.log("Trường:", TEN_TRUONG);
 var monHoc = "CSE391";
 console.log("Môn:", monHoc);
 
+// ===== STRING — Chuỗi =====
+let hoTen = "Nguyễn Văn A";     // Dùng dấu ""
+let diaChi = 'Hà Nội';          // Dùng dấu ''
+let loiChao = `Xin chào ${hoTen}`; // Dùng backtick (template literal)
+
+console.log(typeof hoTen);      // "string"
+console.log(loiChao);           // "Xin chào Nguyễn Văn A"
+
+// ===== NUMBER — Số =====
+let soNguyen = 42;
+let soThuc = 3.14;
+let am = -10;
+let voCuc = Infinity;
+
+console.log(typeof soNguyen);   // "number"
+
+// ===== BOOLEAN — Đúng/Sai =====
+let laTrue = true;
+let laFalse = false;
+
+console.log(typeof laTrue);     // "boolean"
+
+// ===== NULL & UNDEFINED =====
+let giaTriNull = null;          // "không có gì" (cố tình)
+let chuaGanGiaTri;              // undefined (chưa gán)
+
+console.log(typeof giaTriNull);   // "object" (bug nổi tiếng của JS!)
+console.log(typeof chuaGanGiaTri); // "undefined"
+
+// ===== Kiểm tra kiểu =====
+console.log("42 là:", typeof 42);          // number
+console.log("'42' là:", typeof "42");      // string
+console.log("true là:", typeof true);      // boolean
+
 // bài tập con 0.3
 let tenMonHoc = "Nguyên lý lập trình web";
 let soTinChi = 3;
